@@ -1,6 +1,7 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
-
+#source /home/kubuntu/.myscripts/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+setopt auto_list
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
@@ -187,10 +188,10 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
+alias ll='ls -lF'
+alias la='ls -AlF'
 alias l='ls -CF'
-alias lla='ls -Al'
+#alias lla='ls -Al'
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -202,3 +203,7 @@ fi
 if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
+
+# Aliases for applications installed from flatpak
+alias steam='flatpak run com.valvesoftware.Steam'
+alias easyeffects='flatpak run com.github.wwmm.easyeffects'
