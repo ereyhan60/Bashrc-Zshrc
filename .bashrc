@@ -108,10 +108,10 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
+alias ll='ls -lF'
+alias la='ls -AlF'
 alias l='ls -CF'
-alias lla='ls -Al'
+#alias lla='ls -Al'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -132,3 +132,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Aliases for applications installed from flatpak
+alias steam='flatpak run com.valvesoftware.Steam'
+alias easyeffects='flatpak run com.github.wwmm.easyeffects'
